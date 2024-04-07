@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mona Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i&subset=cyrillic" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    #typing-animation {
+      font-family: 'Playfair Display', serif;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+    }
+  </style>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="ajFc5iygPbfLIn5Fs"></script> <!-- Include your EmailJS user ID file -->
+</head>
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column align-items-center justify-content-center">
+    <h1>Hi👋</h1>
+    <h1>I'm Manisha</h1>
+    <!-- Element to contain animated typing -->
+    <span id="typing-animation"></span>
+
+    <script>
+
+    // Initialize the typing animation
+    const typingAnimationElement = document.getElementById('typing-animation');
+
+    // Create an array of typing text
+    const typingTexts = [
+    'Pythonist ',
+    'Learner  ',
+    'Analyst  ',
+    'Developer ',
+    'Coder  ',
+
+    ];
+
+    // Create a function to display the typing animation for a given text
+    function playTypingAnimation(text) {
+    // Loop through each character and add it to the element
+    for (let i = 0; i < text.length; i++) {
+      setTimeout(() => {
+      typingAnimationElement.textContent += text[i];
+      }, i * 200); // Increase the delay to slow down the typing animation
+    }
+
+    // Once the animation is complete, reset the text and start over
+    setTimeout(() => {
+      typingAnimationElement.textContent = '';
+      playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+    }, text.length * 250);
+    }
+
+    // Start the typing animation loop
+    playTypingAnimation(typingTexts[0]);
+
+    </script>
+    <a href="#about" class="btn-get-started scrollto"><i class="bi bi-chevron-double-down"></i></a>
+  </section><!-- End Hero -->
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">Mona</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">
+          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+          <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
+            <div class="content d-flex flex-column justify-content-center">
+              <h3>About_</h3>
+              <p>
+                A tech learner seeking the knowledge of analysis and reports building to solve modern Business Problem. An Enthusiast
+                who loves to create dashboard and analyse data for powerful insights.
+              </p>
+              
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills_</h2>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">SQL <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Excel <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Power BI <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">Python <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Tableau <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Data Analysis <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <!--<h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>Manisha Sharma</h4>
+              <p><em>Business Analytics | Data Analysis | Data Visualization | Sql Developer</em></p>
+              <p>
+              <ul>
+                <li>Degana, Rajasthan, India</li>
+                <li>(+91) </li>
+                <li>manishash0805@gmail.com</li>
+              </ul>
+              </p>
+            </div>-->
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor Of Arts(BA)</h4>
+              <h5>2022 - 2025</h5>
+              <p><em>Maharishi Dayanand Saraswati University(MSDU), Ajmer</em></p>
+              <p>Subjects: <br>Humanities, Political Science, History, Arts, Geography</p>
+            </div>
+            <div class="resume-item">
+              <h4>High Scholling</h4>
+              <h5>2020 - 2022</h5>
+              <p><em>Ranabai Senior Secondary School</em></p>
+            <p>Subjects: <br>Indian History &amp; Civics, Hindi(Grammer And Literature), Political Science, English, Geography<p>
+              <p>Achievments:</p>
+              <li>State rank holder from Nagaur Dist. by securing 1st rank</li>
+              <li>Winning many Hindi Literature Writing prizes</li>
+              <li>Honoured by Rajasthan Govt, rewarded with a Car and Trophy for rank holding</li>
+              <br>
+              <p>Grade: 98.84% in 12th RBSE Boards</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Fresher, still working on myself</h4>
+              <!--<h5>2019 - Present</h5>
+              <p><em>Experion, New York, NY </em></p>
+              <p>
+              <ul>
+                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
+                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+              </ul>
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>Graphic design specialist</h4>
+              <h5>2017 - 2018</h5>
+              <p><em>Stepping Stone Advertising, New York, NY</em></p>
+              <p>
+              <ul>
+                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
+                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+              </ul>
+              </p>
+            </div>-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-deezer"></i></div>
+              <h4 class="title"><a href="">Analysis</a></h4>
+              <p class="description">Performing analysis on different dataset for valuable insights.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Presentation</a></h4>
+              <p class="description">Presenting the analysis and reports to the clients and board members for a better understanding to the business Problem</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Project Management</a></h4>
+              <p class="description">Completing the projects given with time and work efficiently.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-signal-3"></i></div>
+              <h4 class="title"><a href="">Dashboard building</a></h4>
+              <p class="description">Constructing dashboards and sales reports using tools like Power BI &amp; Tableau</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Tehe best way to showcase any skills is by creating some projects. Here are some of my projects which I keep posting after completion.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app"><!--App-->SQL</li>
+              <li data-filter=".filter-card"><!--Card-->Dashboards</li>
+              <li data-filter=".filter-web"><!--Web-->Python</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/Portfolio1/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Music Store Analysis</h4>
+                <p>SQL</p>
+              </div>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/Portfolio1/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SQL"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details1.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio 3/portfolio bgg2.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Diwali Sales Analysis</h4>
+                <p>Jupyter Notebook</p>
+              </div>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio 3/portfolio bgg2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Jupyter Notebook"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details3.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/Portfolio 2/portfolio 2.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>E-Commerce Sales Dashboard</h4>
+                <p>Power BI</p>
+              </div>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/Portfolio 2/portfolio 2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Dashboard"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details2.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio4/project4.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Annual Report Dashboard</h4>
+                <p>MS Excel</p>
+              </div>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio4/project4.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Excel Dashboard"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details4.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p></p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <h3>Mona</h3>
+              <p><strong>Your Connection Matters 😊</strong><br>
+              Follow me on my Social profiles</p>
+              <div class="social-links">
+                <a href="https://github.com/ManishaMona" class="github"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/manisha-sharma-a1105b286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-geo-alt"></i>
+                <p>Degana, Nagaur <br>
+                Rajasthan</p>
+              </div>
+
+              <div class="d-flex align-items-center mt-4">
+                <i class="bi bi-envelope"></i>
+                <p>manishash0805@gmail.com</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-8">
+            <form action="" id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" 
+                    name="name" 
+                    class="form-control" 
+                    id="name" 
+                    placeholder="Your Name" 
+                    required>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="email" 
+                    class="form-control" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Your Email" 
+                    required>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="text" 
+                    class="form-control" 
+                    name="subject" 
+                    id="subject"
+                    placeholder="Subject" 
+                    required>
+                </div>
+                <div class="form-group mt-3">
+                    <textarea class="form-control" 
+                    name="message" 
+                    rows="5" 
+                    placeholder="Message" 
+                    required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+        </div>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("ajFc5iygPbfLIn5Fs");
+   })();
+</script>
+    <script>
+        (function(){
+            emailjs.init("ajFc5iygPbfLIn5Fs"); // Replace YOUR_USER_ID with your actual user ID from EmailJS
+
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Get form data
+                var formData = {
+                    name: this.name.value,
+                    email: this.email.value,
+                    subject: this.subject.value,
+                    message: this.message.value
+                };
+
+                // Send email
+                emailjs.send("service_7brj2yx", "template_cwlew2h",formData)
+                    .then(function(response) {
+                        console.log('Success!', response.status, response.text);
+                        // Reset form after successful submission
+                        document.getElementById('contact-form').reset();
+                        // Show success message
+                        document.querySelector('.sent-message').style.display = 'block';
+                    }, function(error) {
+                        console.log('Failed...', error);
+                        // Show error message
+                        document.querySelector('.error-message').innerText = 'Failed to send message. Please try again later.';
+                        document.querySelector('.error-message').style.display = 'block';
+                    });
+            });
+        })();
+    </script>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Manisha(Mona)</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
